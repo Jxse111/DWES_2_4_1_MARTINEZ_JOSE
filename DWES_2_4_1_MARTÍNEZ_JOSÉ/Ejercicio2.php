@@ -13,7 +13,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <?php
         $matriz50 = [];
         $num = 0;
-        $naranja = 'orange';//Usando una varaible para el color
+        $naranja = 'orange'; //Usando una varaible para el color
+        $alineamiento = 'center';
         define("TAM", 80);
         for ($filas = 0; $filas < 5; $filas++) {
             for ($columnas = 0; $columnas < 5; $columnas++) {
@@ -28,7 +29,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 <tr>
                     <!-- Generamos las columnas de la tabla -->
                     <?php foreach ($fila as $numero) { //Recorremos las columnas ?>
-                        <td
+                        <td 
+                            align='<?php echo $alineamiento ?>'
                             width='<?php echo TAM ?>';
                             height='<?php echo TAM ?>';
                             bgcolor = '<?php if ($filas % 2 != 0) echo $naranja ?>'>
@@ -47,6 +49,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     <?php foreach ($matriz50 as $numero) { ?>
                         <!-- Colocamos los numeros en las columnas -->
                         <td
+                            align='<?php echo $alineamiento ?>'
                             width='<?php echo TAM ?>' 
                             height='<?php echo TAM ?>'
                             >

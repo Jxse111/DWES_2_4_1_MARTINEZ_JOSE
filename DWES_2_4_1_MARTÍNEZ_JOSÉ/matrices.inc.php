@@ -20,9 +20,13 @@ function suma_matriz($matriz1, $matriz2) {
     $tamanioMatriz1 = count($matriz1);
     $tamanioMatriz2 = count($matriz2);
     if ($tamanioMatriz1 == $tamanioMatriz2) {
-        for ($filas = 0; $filas < count($matriz1); $filas++) {
-            for ($columnas = 0; $columnas < count($matriz1[$filas]); $columnas++) {
-                $resultado[$filas][$columnas] = $matriz1[$filas][$columnas] + $matriz2[$filas][$columnas];
+//        for ($filas = 0; $filas < count($matriz1); $filas++) {
+//            for ($columnas = 0; $columnas < count($matriz1[$filas]); $columnas++) {
+//                $resultado[$filas][$columnas] = $matriz1[$filas][$columnas] + $matriz2[$filas][$columnas];
+//            } 
+        foreach ($matriz1 as $i => $filas) {
+            foreach ($filas as $j => $celda) {
+                $resultado[$i][$j] = $matriz1[$i][$j] + $matriz2[$i][$j];
             }
         }
     } else {
