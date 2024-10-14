@@ -14,7 +14,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         $matriz50 = [];
         $num = 0;
         $naranja = 'orange';//Usando una varaible para el color
-        define("TAM", 8);
+        define("TAM", 80);
         for ($filas = 0; $filas < 5; $filas++) {
             for ($columnas = 0; $columnas < 5; $columnas++) {
                 $matriz50[$filas][] = $num % 2 == 0 ? $num += 2 : ++$num;
