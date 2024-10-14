@@ -13,6 +13,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <?php
         $matriz50 = [];
         $num = 0;
+        $naranja = 'orange';//Usando una varaible para el color
         define("TAM", 8);
         for ($filas = 0; $filas < 5; $filas++) {
             for ($columnas = 0; $columnas < 5; $columnas++) {
@@ -30,7 +31,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                         <td
                             width='<?php echo TAM ?>';
                             height='<?php echo TAM ?>';
-                            bgcolor = '<?php if ($filas % 2 != 0) echo 'orange'; ?>'>
+                            bgcolor = '<?php if ($filas % 2 != 0) echo $naranja ?>'>
                             <?php echo $numero ?></td><!-- Mostramos el numero asociado a cada celda -->
                     <?php } ?>
                 </tr> 
@@ -42,7 +43,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             <?php for ($filas = 0; $filas < count($matriz50); $filas++) {
                 ?>
                 <!-- Abrimos la nueva fila y le asignamos la condicion que en caso de que sea impar se tiña el fondo de naranja-->
-                <tr bgcolor = '<?php if ($filas % 2 != 0) echo 'orange'; ?>'>
+                <tr bgcolor = '<?php if ($filas % 2 != 0) echo $naranja ?>'>
                     <?php foreach ($matriz50 as $numero) { ?>
                         <!-- Colocamos los numeros en las columnas -->
                         <td
