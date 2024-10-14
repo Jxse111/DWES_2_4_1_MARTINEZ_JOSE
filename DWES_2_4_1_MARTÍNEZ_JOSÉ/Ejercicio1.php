@@ -34,7 +34,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 
         <h2>Versión B: Números pares colocados por columnas de 5 * 5</h2>
         <table border ="1">
-            <?php for ($filas = 0; $filas < count($matriz50); $filas++) {
+            <?php for ($filas = 0; $filas < count($matriz50); $filas++) {// NO usar!!
                 ?>
                 <tr><!-- Abrimos la nueva fila-->
                     <?php foreach ($matriz50 as $numero) { ?>
